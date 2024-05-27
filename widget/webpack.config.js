@@ -2,8 +2,8 @@ const path = require('path');
 const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-// const BundleAnalyzerPlugin =
-//   require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin =
+  require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   mode: 'production',
@@ -15,10 +15,10 @@ module.exports = {
     type: 'filesystem',
     allowCollectingMemory: true,
   },
-  // externals: {
-  //   react: 'window.React',
-  //   'react-dom': 'window.ReactDOM',
-  // },
+  externals: {
+    react: 'window.React',
+    'react-dom': 'window.ReactDOM',
+  },
   devtool: false,
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
@@ -28,7 +28,7 @@ module.exports = {
     },
   },
   plugins: [
-   // new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin(),
     new webpack.ProvidePlugin({
       Buffer: ['buffer', 'Buffer'],
     }),
