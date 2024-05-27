@@ -23,6 +23,13 @@ export default {
                     'react-dom': 'react-dom',
                 },
             },
+            onwarn(warning, defaultHandler) {
+                if (warning.code === 'SOURCEMAP_ERROR') {
+                  return
+                }
+        
+                defaultHandler(warning)
+              },
         },
     }
 };
