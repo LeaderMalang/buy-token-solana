@@ -22,9 +22,7 @@ export default {
                     react: 'react',
                     'react-dom': 'react-dom',
                 },
-                manualChunks: {
-                    antd: ['antd'],
-                  },
+                
             },
             onwarn(warning, defaultHandler) {
                 if (warning.code === 'SOURCEMAP_ERROR') {

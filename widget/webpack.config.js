@@ -15,10 +15,10 @@ module.exports = {
     type: 'filesystem',
     allowCollectingMemory: true,
   },
-  // externals: {
-  //   react: 'window.React',
-  //   'react-dom': 'window.ReactDOM',
-  // },
+  externals: {
+    react: 'window.React',
+    'react-dom': 'window.ReactDOM',
+  },
   devtool: false,
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
@@ -28,7 +28,7 @@ module.exports = {
     },
   },
   plugins: [
-    // new BundleAnalyzerPlugin(),
+   // new BundleAnalyzerPlugin(),
     new webpack.ProvidePlugin({
       Buffer: ['buffer', 'Buffer'],
     }),
