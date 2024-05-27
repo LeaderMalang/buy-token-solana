@@ -15,10 +15,10 @@ module.exports = {
     type: 'filesystem',
     allowCollectingMemory: true,
   },
-  externals: {
-    react: 'window.React',
-    'react-dom': 'window.ReactDOM',
-  },
+  // externals: {
+  //   react: 'window.React',
+  //   'react-dom': 'window.ReactDOM',
+  // },
   devtool: false,
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
