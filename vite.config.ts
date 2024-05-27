@@ -14,6 +14,7 @@ export default {
             name: 'test',
             fileName: 'index',
         },
+        sourcemap: true,
         rollupOptions: {
             external: ['react', 'react-dom'],
             output: {
