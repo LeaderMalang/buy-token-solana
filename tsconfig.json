@@ -17,7 +17,7 @@
     "src/**/*",
     "custom.d.ts"
   ],
-  "exclude": [
-    "**/*stories*.*"
-  ]
+  // "exclude": [
+  //   "**/*stories*.*"
+  // ]
 }
