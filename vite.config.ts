@@ -24,13 +24,13 @@ export default {
                 },
                 
             },
-            onwarn(warning, defaultHandler) {
-                if (warning.code === 'SOURCEMAP_ERROR') {
-                  return
-                }
+            // onwarn(warning, defaultHandler) {
+            //     if (warning.code === 'SOURCEMAP_ERROR') {
+            //       return
+            //     }
         
-                defaultHandler(warning)
-              },
+            //     defaultHandler(warning)
+            //   },
         },
     }
 };
